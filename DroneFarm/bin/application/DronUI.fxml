@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="746.0" prefWidth="1051.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <SplitPane dividerPositions="0.4947418738049713" layoutX="1.0" layoutY="-2.0" prefHeight="748.0" prefWidth="1048.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="289.0">
+               <children>
+                  <Button layoutX="10.0" layoutY="336.0" mnemonicParsing="false" onAction="#deleteSelected" prefHeight="25.0" prefWidth="120.0" text="- Delete Selected" />
+                  <Button layoutX="10.0" layoutY="270.0" mnemonicParsing="false" onAction="#addItemContainer" prefHeight="25.0" prefWidth="138.0" text="+ Add Item Container" />
+                  <Button layoutX="10.0" layoutY="303.0" mnemonicParsing="false" onAction="#addItem" prefHeight="25.0" prefWidth="85.0" text="+ Add Item " />
+                  <Button fx:id="saveBut" layoutX="300.0" layoutY="180.0" mnemonicParsing="false" onAction="#setName" text="Save" />
+                  <Label layoutX="7.0" layoutY="19.0" text="Farm Items" />
+                  <Label layoutX="215.0" layoutY="45.0" text="Name" />
+                  <Label layoutX="215.0" layoutY="73.0" text="Position (x, y)" />
+                  <Label layoutX="215.0" layoutY="102.0" text="Size ( L, W, H )" />
+                  <Label layoutX="215.0" layoutY="133.0" text="Price" />
+                  <TextField fx:id="nameText" layoutX="301.0" layoutY="41.0" onAction="#setName" prefHeight="25.0" prefWidth="92.0" />
+                  <TextField layoutX="301.0" layoutY="69.0" prefHeight="25.0" prefWidth="42.0" />
+                  <TextField layoutX="347.0" layoutY="69.0" prefHeight="25.0" prefWidth="42.0" />
+                  <TextField layoutX="393.0" layoutY="98.0" prefHeight="25.0" prefWidth="42.0" />
+                  <TextField layoutX="301.0" layoutY="98.0" prefHeight="25.0" prefWidth="42.0" />
+                  <TextField layoutX="347.0" layoutY="98.0" prefHeight="25.0" prefWidth="42.0" />
+                  <TextField fx:id="priceText" layoutX="301.0" layoutY="129.0" onAction="#setPrice" prefHeight="25.0" prefWidth="92.0" />
+                  <TreeView fx:id="treeView" layoutX="10.0" layoutY="40.0" onContextMenuRequested="#selectItem" onMouseClicked="#selectItem" prefHeight="217.0" prefWidth="190.0" />
+                  <ListView fx:id="itemView" layoutX="215.0" layoutY="249.0" prefHeight="200.0" prefWidth="200.0" />
+                  <Label layoutX="217.0" layoutY="225.0" prefHeight="17.0" prefWidth="102.0" text="List Items Status" />
+                  <Button fx:id="changeNameButton" layoutX="444.0" layoutY="40.0" mnemonicParsing="false" onAction="#changeName" text="change" />
+                  <Button layoutX="445.0" layoutY="68.0" mnemonicParsing="false" text="change" />
+                  <Button layoutX="446.0" layoutY="97.0" mnemonicParsing="false" text="change" />
+                  <Button layoutX="446.0" layoutY="129.0" mnemonicParsing="false" text="change" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="292.0" />
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
